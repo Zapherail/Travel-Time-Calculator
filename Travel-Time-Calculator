@@ -1,0 +1,42 @@
+package chapt3_assign3.pkg2_sharprobert;
+import java.util.Scanner;
+public class Chapt3_Assign32_SharpRobert {
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to the Travel Time Calculator"); //Making header
+        System.out.println(""); //Empty Space
+        String choice = "y"; //Setting value for while loop
+        Scanner sc = new Scanner(System.in); //Bringing scanner in
+        int hours = 0;
+        int minutes = 0;
+        while (choice.equalsIgnoreCase("Y")) { //While loop starting
+            System.out.print("Enter Miles: "); //Asking user for Miles
+            String userMiles = sc.nextLine(); //Saving the user input
+            int userMilesNum = Integer.parseInt(userMiles); // Making string into a float
+            System.out.print("Enter miles per hour: ");
+            String userMPH = sc.nextLine();
+            int userMPHNum = Integer.parseInt(userMPH);
+            System.out.println("");
+            System.out.println("Estimated travel time");
+            System.out.print("");
+            System.out.println("------------------");
+            //float totalTime = userMilesNum / userMPHNum;
+            hours = userMilesNum / userMPHNum;
+            System.out.println("Hours: " + hours);
+            minutes = (userMilesNum % userMPHNum) * 60 / userMPHNum;
+            System.out.println("Minutes: " + minutes);
+            System.out.print("");
+            System.out.print("Continue? (y/n): ");
+            choice = sc.nextLine(); //Contnuing or ending while loop
+            System.out.println("");
+            
+            
+           
+                    
+            
+        }
+                
+        
+    }
+    
+}
